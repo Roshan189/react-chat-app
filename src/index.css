@@ -85,3 +85,67 @@ img {
   width: 32px;
   height: 32px;
 }
+
+/* home page */
+
+.home {
+  background-color: #a7bcff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  border: 1px solid #fff;
+  border-radius: 10px;
+  width: 65%;
+  height: 80%;
+  display: flex;
+  overflow: hidden;
+}
+
+.sidebar {
+  flex: 1;
+  background-color: #3e3c61;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #2f2d52;
+  height: 50px;
+  padding: 10px;
+  justify-content: space-between;
+  color: #ddddf7;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  color: #ddddf7;
+}
+
+.navbar .user {
+  display: flex;
+  gap: 10px;
+}
+
+.user img {
+  background-color: #ddddf7;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user button {
+  background-color: #5d5b8d;
+  color: #ddddf7;
+  font-style: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.chat {
+  flex: 2;
+}
