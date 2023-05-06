@@ -146,6 +146,121 @@ img {
   cursor: pointer;
 }
 
+.search {
+  border-bottom: 1px solid gray;
+}
+
+.search .searchForm {
+  padding: 10px;
+}
+
+.searchForm input {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  outline: none;
+}
+
+.searchForm input::placeholder {
+  color: lightgrey;
+}
+
+.userChat {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.userChat:hover {
+  background-color: #2f2d52;
+}
+
+.userChat img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.userChatInfo span {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.userChatInfo p {
+  font-size: 14px;
+  color: lightgray;
+}
+
 .chat {
   flex: 2;
+}
+
+.chat .chatInfo {
+  height: 50px;
+  background-color: #5d5b8d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  color: lightgray;
+}
+
+.chat .chatInfo .chatIcons {
+  display: flex;
+  gap: 10px;
+}
+
+.chat .chatInfo .chatIcons i {
+  height: 24px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.messages {
+  background-color: #ddddf7;
+  padding: 10px;
+  height: calc(100% - 160px);
+}
+
+.input {
+  height: 50px;
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input input {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #2f2d52;
+  font-size: 18px;
+}
+
+.input input::placeholder {
+  color: lightgray;
+}
+
+.input .send {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.send i {
+  font-style: 24px;
+  cursor: pointer;
+}
+
+.input button {
+  border: none;
+  padding: 10px 15px;
+  color: #fff;
+  background-color: #8da4f1;
 }
