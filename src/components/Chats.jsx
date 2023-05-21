@@ -10,6 +10,7 @@ const Chats = () => {
   const { currentUser } = useContext(AuthContext);
   const { dispatch } = useContext(ChatContext);
 
+  //getting chats and update with latest user
   useEffect(() => {
     const getChats = () => {
       const unsub = onSnapshot(doc(db, "userChats", currentUser.uid), (doc) => {
@@ -24,6 +25,7 @@ const Chats = () => {
     currentUser.uid && getChats();
   }, [currentUser.uid]);
 
+  //handling type
   const handleSelect = (u) => {
     dispatch({ type: "CHANGE_USER", payload: u });
   };

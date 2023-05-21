@@ -19,6 +19,7 @@ const Input = () => {
   const { currentUser } = useContext(AuthContext);
   const { data } = useContext(ChatContext);
 
+  //maintaining Functionality for send button
   const handleSend = async () => {
     if (img) {
       const storageRef = ref(storage, uuid());
@@ -54,6 +55,7 @@ const Input = () => {
       });
     }
 
+    //this fn updates lastMessage and date for current user
     await updateDoc(doc(db, "userChats", currentUser.uid), {
       [data.chatId + ".lastMessage"]: {
         text,
@@ -61,6 +63,7 @@ const Input = () => {
       [data.chatId + ".date"]: serverTimestamp(),
     });
 
+    //this function updates lastmessage, text and date
     await updateDoc(doc(db, "userChats", data.user.uid), {
       [data.chatId + ".lastMessage"]: {
         text,

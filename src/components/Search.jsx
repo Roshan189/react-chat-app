@@ -22,6 +22,7 @@ const Search = () => {
 
   const { currentUser } = useContext(AuthContext);
 
+  //to check if user's enter search is present or not
   const handleSearch = async () => {
     const q = query(
       collection(db, "users"),
@@ -38,6 +39,7 @@ const Search = () => {
     }
   };
 
+  //after search press on enter and it will call user for you
   const handleKey = (e) => {
     e.code === "Enter" && handleSearch();
   };
@@ -66,6 +68,7 @@ const Search = () => {
           [combinedId + ".date"]: serverTimestamp(),
         });
 
+        //to keep upto date date in firebase
         await updateDoc(doc(db, "userChats", user.uid), {
           [combinedId + ".userInfo"]: {
             uid: currentUser.uid,

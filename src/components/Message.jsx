@@ -10,6 +10,7 @@ const Message = ({ message }) => {
 
   const ref = useRef();
 
+  //to handle overflow of message
   useEffect(() => {
     ref.current?.scrollIntoView({ behaviour: "smooth" });
   }, [message]);
